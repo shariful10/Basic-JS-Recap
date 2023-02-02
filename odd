@@ -1,0 +1,23 @@
+var myDays = 20;
+var first1To10Days = 500;
+var second11To20Days = 300;
+var third21ToAnyDays = 100;
+
+if (myDays <= 10) {
+    var totalCost = myDays * 500;
+    console.log(totalCost);
+} else if (myDays <= 20 && myDays > 10) {
+    var first10DaysCost = 10 * 500;
+    var remainingDays = myDays - 10;
+    var totalDaysCost = remainingDays * 300;
+    var total11To20DaysCost = first10DaysCost + totalDaysCost;
+    console.log(total11To20DaysCost);
+} else {
+    var first1To10Days = 500 * 10;
+    var second11To20Days = 300 * 10;
+    var remainingDays = myDays - 20;
+    var thirdInfinityDays = remainingDays * 100;
+    var totalAbove20DaysCost = first1To10Days + second11To20Days +
+            thirdInfinityDays;
+    console.log(totalAbove20DaysCost);
+}
